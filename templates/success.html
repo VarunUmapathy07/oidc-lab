@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8" />
+<title>OIDC Lab — Success</title>
+<style>
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:3rem}
+pre{background:#0b1020;color:#ebf2ff;padding:16px;border-radius:8px;overflow:auto}
+img{border-radius:50%;vertical-align:middle}.row{display:flex;align-items:center;gap:12px}
+.pill{display:inline-block;padding:4px 8px;border:1px solid #d1d5db;border-radius:999px}
+</style></head><body>
+<h1>✅ Login successful</h1>
+<div class="row">
+  {% if user.picture %}<img src="{{ user.picture }}" width="48" height="48">{% endif %}
+  <div>
+    <div><strong>{{ user.name }}</strong> ({{ user.email }})</div>
+    {% if user.hd %}<div class="pill">hd: {{ user.hd }}</div>{% endif %}
+    {% if user.is_admin %}<div class="pill">role: admin</div>{% else %}<div class="pill">role: user</div>{% endif %}
+  </div>
+</div>
+<h3>ID Token claims</h3>
+<pre>{{ user.claims | tojson(indent=2) }}</pre>
+<p><a href="/admin">Go to Admin page</a> · <a href="/">Home</a></p>
+</body></html>

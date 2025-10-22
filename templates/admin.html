@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8" />
+<title>OIDC Lab — Admin</title>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:3rem}</style>
+</head><body>
+{% if allowed %}
+  <h1>🔒 Admin Area</h1>
+  <p>Only whitelisted emails can view this. You are {{ user.email }}.</p>
+{% else %}
+  <h1>⛔ Access denied</h1>
+  <p>{{ user.email }} is not an admin.</p>
+{% endif %}
+<p><a href="/">Home</a></p>
+</body></html>
