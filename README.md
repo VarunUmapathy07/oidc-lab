@@ -29,7 +29,7 @@ ADMIN_EMAILS=umapathyvarun5@gmail.com
 ENFORCE_DOMAIN=
 Keep .env out of git (see .gitignore). Rotate the secret if it ever leaks.
 
--What I did:
+What I learned:
 -OAuth 2.0 Authorization Code + PKCE
 -Server-side ID token verification (google-auth, JWKS)
 -Decoded JWT claims display
