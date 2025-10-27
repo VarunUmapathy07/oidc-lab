@@ -1,4 +1,4 @@
-# 🧠 OIDC Lab — FastAPI + Google OIDC (PKCE)
+# OIDC Lab — FastAPI + Google OIDC (PKCE)
 
 ## Step 1 — Google OAuth setup
 ![Step 1 — Credentials](images/step0-credentials.png)
